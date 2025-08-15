@@ -4,6 +4,9 @@ import { User } from '../users/entities/user.entity';
 import { Role } from '../roles/entities/role.entity';
 import { Permission } from '../roles/entities/permission.entity';
 import InitialSeeder from '../database/seeds/initial.seed';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const options: DataSourceOptions & SeederOptions = {
   type: 'mysql',
@@ -16,4 +19,4 @@ const options: DataSourceOptions & SeederOptions = {
   seeds: [InitialSeeder],
 };
 
-export const AppDataSource = new DataSource(options); 
+export const AppDataSource = new DataSource(options);
